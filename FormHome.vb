@@ -7,6 +7,37 @@ Public Class FormHome
         Call Koneksi()
     End Sub
 
+    Sub JumlahQueryPP333()
+        Dim JmlQ1 As Integer
+        For BarisQ1 As Integer = 0 To DGVRekapQuery1.Rows.Count - 1
+            JmlQ1 = JmlQ1 + DGVRekapQuery1.Rows(BarisQ1).Cells(6).Value
+        Next
+        LabelJumlahQuery1.Text = JmlQ1
+        LabelHeader1.Text = "Netto"
+
+        Dim JmlQ2 As Integer
+        For BarisQ2 As Integer = 0 To DGVRekapQuery2.Rows.Count - 1
+            JmlQ2 = JmlQ2 + DGVRekapQuery2.Rows(BarisQ2).Cells(5).Value
+        Next
+        LabelHeader2.Text = "Netto"
+        LabelJumlahQuery2.Text = JmlQ2
+    End Sub
+
+    Sub JumlahQueryPP334()
+        Dim JmlQ1 As Integer
+        For BarisQ1 As Integer = 0 To DGVRekapQuery1.Rows.Count - 1
+            JmlQ1 = JmlQ1 + DGVRekapQuery1.Rows(BarisQ1).Cells(7).Value
+        Next
+        LabelJumlahQuery1.Text = JmlQ1
+        LabelHeader1.Text = "SebelumPB1"
+
+        Dim JmlQ2 As Integer
+        For BarisQ2 As Integer = 0 To DGVRekapQuery2.Rows.Count - 1
+            JmlQ2 = JmlQ2 + DGVRekapQuery2.Rows(BarisQ2).Cells(5).Value
+        Next
+        LabelHeader2.Text = "SebelumPB1"
+        LabelJumlahQuery2.Text = JmlQ2
+    End Sub
     Private Sub ButtonRekap_Click(sender As Object, e As EventArgs) Handles ButtonRekap.Click
         If ComboBoxKodeCafe.Text = "PP334" Then
             Call Koneksi()
@@ -19,6 +50,7 @@ Public Class FormHome
             Ds = New DataSet
             Da.Fill(Ds)
             DGVRekapQuery1.DataSource = Ds.Tables(0)
+            Call JumlahQueryPP334()
 
             Call Koneksi()
             Da = New SqlDataAdapter("select a.bara,b.[desc],a.tgl,sum(qty) as qty,sum(netto) as SebelumPB1,round(sum(netto*1.1),-2) as SetelahPB1
@@ -32,6 +64,7 @@ Public Class FormHome
             Da.Fill(Ds)
             DGVRekapQuery2.DataSource = Ds.Tables(0)
             TextBoxNamaCafe.Text = "Cafe Java"
+            Call JumlahQueryPP334()
 
         Else
             Call Koneksi()
@@ -44,6 +77,7 @@ Public Class FormHome
             Ds = New DataSet
             Da.Fill(Ds)
             DGVRekapQuery1.DataSource = Ds.Tables(0)
+            Call JumlahQueryPP333()
 
             Call Koneksi()
             Da = New SqlDataAdapter("select a.bara,b.[desc],a.tgl,sum(qty) as qty,sum(netto) as netto,sum(bruto) as bruto
@@ -57,6 +91,7 @@ Public Class FormHome
             Da.Fill(Ds)
             DGVRekapQuery2.DataSource = Ds.Tables(0)
             TextBoxNamaCafe.Text = "The Merchant"
+            Call JumlahQueryPP333()
 
         End If
 

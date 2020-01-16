@@ -8,7 +8,7 @@ Module ModuleKoneksi
 
     Sub Koneksi()
         Try
-            Conn = New SqlConnection("Server =NUNU-PC\SQLEXPRESS;database= TJUAL;Trusted_Connection =yes")
+            Conn = New SqlConnection("Server=NUNU-PC\SQLEXPRESS;database= TJUAL;Trusted_Connection =yes")
             Conn.Open()
             FormHome.LabelDatabase.Text = "connected"
         Catch ex As Exception

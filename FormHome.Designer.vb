@@ -35,6 +35,10 @@ Partial Class FormHome
         Me.DGVRekapQuery2 = New System.Windows.Forms.DataGridView()
         Me.LabelNamaCafe = New System.Windows.Forms.Label()
         Me.TextBoxNamaCafe = New System.Windows.Forms.TextBox()
+        Me.LabelJumlahQuery1 = New System.Windows.Forms.Label()
+        Me.LabelJumlahQuery2 = New System.Windows.Forms.Label()
+        Me.LabelHeader1 = New System.Windows.Forms.Label()
+        Me.LabelHeader2 = New System.Windows.Forms.Label()
         CType(Me.DGVRekapQuery1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGVRekapQuery2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -152,11 +156,51 @@ Partial Class FormHome
         Me.TextBoxNamaCafe.Size = New System.Drawing.Size(121, 20)
         Me.TextBoxNamaCafe.TabIndex = 12
         '
+        'LabelJumlahQuery1
+        '
+        Me.LabelJumlahQuery1.AutoSize = True
+        Me.LabelJumlahQuery1.Location = New System.Drawing.Point(794, 241)
+        Me.LabelJumlahQuery1.Name = "LabelJumlahQuery1"
+        Me.LabelJumlahQuery1.Size = New System.Drawing.Size(10, 13)
+        Me.LabelJumlahQuery1.TabIndex = 13
+        Me.LabelJumlahQuery1.Text = "."
+        '
+        'LabelJumlahQuery2
+        '
+        Me.LabelJumlahQuery2.AutoSize = True
+        Me.LabelJumlahQuery2.Location = New System.Drawing.Point(794, 369)
+        Me.LabelJumlahQuery2.Name = "LabelJumlahQuery2"
+        Me.LabelJumlahQuery2.Size = New System.Drawing.Size(10, 13)
+        Me.LabelJumlahQuery2.TabIndex = 14
+        Me.LabelJumlahQuery2.Text = "."
+        '
+        'LabelHeader1
+        '
+        Me.LabelHeader1.AutoSize = True
+        Me.LabelHeader1.Location = New System.Drawing.Point(794, 216)
+        Me.LabelHeader1.Name = "LabelHeader1"
+        Me.LabelHeader1.Size = New System.Drawing.Size(10, 13)
+        Me.LabelHeader1.TabIndex = 15
+        Me.LabelHeader1.Text = "."
+        '
+        'LabelHeader2
+        '
+        Me.LabelHeader2.AutoSize = True
+        Me.LabelHeader2.Location = New System.Drawing.Point(794, 343)
+        Me.LabelHeader2.Name = "LabelHeader2"
+        Me.LabelHeader2.Size = New System.Drawing.Size(10, 13)
+        Me.LabelHeader2.TabIndex = 16
+        Me.LabelHeader2.Text = "."
+        '
         'FormHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(888, 505)
+        Me.Controls.Add(Me.LabelHeader2)
+        Me.Controls.Add(Me.LabelHeader1)
+        Me.Controls.Add(Me.LabelJumlahQuery2)
+        Me.Controls.Add(Me.LabelJumlahQuery1)
         Me.Controls.Add(Me.TextBoxNamaCafe)
         Me.Controls.Add(Me.LabelNamaCafe)
         Me.Controls.Add(Me.DGVRekapQuery2)
@@ -192,4 +236,8 @@ Partial Class FormHome
     Friend WithEvents DGVRekapQuery2 As DataGridView
     Friend WithEvents LabelNamaCafe As Label
     Public WithEvents TextBoxNamaCafe As TextBox
+    Friend WithEvents LabelJumlahQuery2 As Label
+    Public WithEvents LabelJumlahQuery1 As Label
+    Public WithEvents LabelHeader1 As Label
+    Public WithEvents LabelHeader2 As Label
 End Class
