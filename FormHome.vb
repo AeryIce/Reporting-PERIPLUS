@@ -141,7 +141,7 @@ Public Class FormHome
             ExcelWorkSheetQuery1.Name = "Q1"
             ExcelWorkSheetQuery2.Name = "Q2"
 
-            ExcelWorkSheetQuery2.SaveAs("D:\Report Cafe\Reporting\" & ComboBoxKodeCafe.Text & "\" & TextBoxNamaCafe.Text & " " & DateTimePicker1.Text & ".xlsx")
+            ExcelWorkSheetQuery2.SaveAs("D:\Report Cafe\Reporting\" & ComboBoxKodeCafe.Text & "\" & TextBoxNamaCafe.Text & " " & DateTimePicker1.Text & ".xls")
 
             ExcelWorkBook.Close()
             ExcelApp.Quit()
@@ -150,7 +150,7 @@ Public Class FormHome
             releaseObject(ExcelWorkBook)
             releaseObject(ExcelWorkSheetQuery1)
 
-            MsgBox("Hasil export tersimpan di D:\Report Cafe\Reporting\" & ComboBoxKodeCafe.Text & "\" & TextBoxNamaCafe.Text & " " & DateTimePicker1.Text & ".xlsx", MsgBoxStyle.Information)
+            MsgBox("Hasil export tersimpan di D:\Report Cafe\Reporting\" & ComboBoxKodeCafe.Text & "\" & TextBoxNamaCafe.Text & " " & DateTimePicker1.Text & ".xls", MsgBoxStyle.Information)
         Catch ex As Exception
 
         End Try

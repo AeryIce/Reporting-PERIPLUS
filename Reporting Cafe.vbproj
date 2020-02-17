@@ -87,11 +87,10 @@
     <Compile Include="FormHome.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLoginPage.vb">
-      <SubType>Form</SubType>
+    <Compile Include="FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormLoginPage.Designer.vb">
-      <DependentUpon>FormLoginPage.vb</DependentUpon>
+    <Compile Include="FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPP333.Designer.vb">
@@ -113,6 +112,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuleKoneksi.vb" />
+    <Compile Include="ModuleLogin.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -132,6 +132,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -165,6 +168,27 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner Periplus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telegram_app_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
