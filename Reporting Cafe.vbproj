@@ -50,7 +50,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>C:\Users\Rio\Downloads\Microsoft.Office.Interop.Excel\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -85,6 +85,12 @@
       <DependentUpon>FormAddCafe.vb</DependentUpon>
     </Compile>
     <Compile Include="FormAddCafe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoReporting.Designer.vb">
+      <DependentUpon>FormAutoReporting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAutoReporting.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormHome.Designer.vb">
@@ -136,6 +142,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAutoReporting.resx">
+      <DependentUpon>FormAutoReporting.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.vb</DependentUpon>
     </EmbeddedResource>
