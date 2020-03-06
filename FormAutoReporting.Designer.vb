@@ -22,6 +22,8 @@ Partial Class FormAutoReporting
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
+		Me.components = New System.ComponentModel.Container()
+		Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
 		Me.SuspendLayout()
 		'
 		'FormAutoReporting
@@ -32,8 +34,10 @@ Partial Class FormAutoReporting
 		Me.ClientSize = New System.Drawing.Size(340, 465)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
 		Me.Name = "FormAutoReporting"
+		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
 		Me.Text = "FormAutoReporting"
 		Me.ResumeLayout(False)
 
 	End Sub
+	Friend WithEvents Timer1 As Timer
 End Class

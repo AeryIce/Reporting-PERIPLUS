@@ -18,6 +18,7 @@ Public Class FormLogin
         If Dr.HasRows Then
             FormAutoReporting.Show()
             Me.Visible = False
+
         Else
             MsgBox("Username dan Password Tidak sesuai")
 
@@ -32,7 +33,8 @@ Public Class FormLogin
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+    Private Sub TextBoxPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxPassword.KeyPress
+        If e.KeyChar = Chr(13) Then ButtonLogin.Focus()
     End Sub
 End Class
